@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+ 
+    <form name="myForm" onsubmit="return username()" >
+        <input type="text"  placeholder="username" id="name">
+            <p id="user"></p>
+        <input type="submit">
+</form>
+<script>
+    
+    function username() {
+        
+    var a = document.getElementById("name").value;
+    if(a == "") {  
+		document.getElementById("user").innerHTML ="Enter any 5 characters";
+		return false;
+	}
+        if(a.length>10) {
+		document.getElementById("user").innerHTML ="please enter atleast more 6 ";
+		return false;
+	}
+    }
+</script>

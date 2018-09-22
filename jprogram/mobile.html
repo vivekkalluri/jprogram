@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ 
+    <form name="myForm" onsubmit="return mobile()" >
+        <input type="text"  placeholder="Mobile Number" id="mob">
+            <p id="Mobile"></p>
+        <input type="submit">
+</form>
+<script>
+    
+    function mobile() {
+        
+    var a = document.getElementById("mob").value;
+    if(a == "") {  
+		document.getElementById("Mobile").innerHTML ="Please Enter Mobile Number";
+		return false;
+	}
+
+	if(isNaN(a)) {  
+		document.getElementById("Mobile").innerHTML ="Please Enter Numeric values";
+		return false;
+	}
+
+
+	
+	if(a.length<10) {
+		document.getElementById("Mobile").innerHTML ="Mobile Number must be 10 digits";
+		return false;
+	}
+	
+	if(a.length>10) {
+		document.getElementById("Mobile").innerHTML ="Mobile Number must be 10 digits ";
+		return false;
+	}
+    }
+    
+</script>
